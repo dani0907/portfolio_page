@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@keyframes slide-left-right {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0); } 
+}
+
+*, *:after,*:before{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.hide{
+  display: none;
+  width: 0;
+  height: 0;
+}
+.projectSkill{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    >span{
+      padding: 5px;
+      border-radius: 10px;
+      background-color: #EFE9E3;
+    }
+  }
+/* **************************** */
+/* ******** next button ******** */
+/* **************************** */
+.nextPageBtn{
+  font-size: 13pt;
+}
+.nextBtnIcon{
+  display: inline-block;
+  animation: slide-left-right 1.2s infinite alternate;
+}
+
+body{
+  line-height: 1.5;
+  color: #281532;
+  font-family: "Montserrat","omnes-variable", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  overflow-x: hidden;
+  background-color: #F9F8F6;
+
+  background-image: 
+  linear-gradient(to right, #EFE9E3 1px, transparent 1px),
+  linear-gradient(to bottom, #EFE9E3 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.mainContainer{
+  max-width: 1450px;
+  min-height: calc(100vh - 70px);
+  margin: 70px auto 0;
+  .mainInner{
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 50px 10px;
+    .innerTitle{
+      text-align: center;
+      font-size: 30pt;
+      font-weight: 500;
+      margin-bottom: 50px;
+    }
+  }
+}
+.innerContainer{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 70px;
+    /* **************************************** */
+    /* ******** main(first) page css ******** */
+    /* **************************************** */
+    .mainBox{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .mainTitle{
+        font-size: 30pt;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      .wordRotateText{
+        font-size: 20pt;
+        margin-bottom: 100px;
+        text-align: center;
+      }
+    }
+    /* **************************************** */
+    /* ******** about me page css ******** */
+    /* **************************************** */
+    &.aboutMe{
+      display: flex;
+      flex-direction: row;
+      .aboutConLeft{
+        width: 50%;
+        padding: 20px 50px;
+      }
+      .aboutConRight{
+        width: 50%;
+        padding: 20px 50px;
+        .miniTitle{
+          font-size: 20px;
+          font-weight: 500;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+        .skillsBox{
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          >span{
+            padding: 5px;
+            background-color: #EFE9E3;
+            border-radius: 10px;
+            
+          }
+        }
+      }
+    }
+    &.project{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 30px;
+      .projectLinkBox{
+        width: 48%;
+        align-items: stretch;
+      }
+      .projectbox{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 30px 20px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        &:hover{
+          transition: all 0.3s ease;
+          transform: translateY(-15px);
+          box-shadow: 5px 5px 10px #D9CFC7;
+        }
+        .projectImg{
+          margin-bottom: 20px;
+        }
+        .projectNm{
+          margin-bottom: 20px;
+          font-weight: 500;
+          font-size: 16.5pt;
+          text-align: center;
+        }
+        .projectInfo{
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        .projectSkill{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 10px;
+          >span{
+            padding: 5px;
+            border-radius: 10px;
+            background-color: #EFE9E3;
+          }
+        }
+      }
+    }
+    &.resume{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      .resumeBox{
+        width: 80%;
+        min-width: 800px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .resumeViewer{
+          width: 100%;
+          height: 800px;
+        }
+      }
+      
+    }
+    &.contact{
+
+    }
+  }

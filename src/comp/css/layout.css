@@ -1,0 +1,180 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  /* background-color: #F9F8F6; */
+  
+  z-index: 10;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #F9F8F6;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  .headInner{
+    max-width: 1450px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    .logo{
+      font-size: 30pt;
+      /* color: #E8DAEF; */
+      /* color: #281532; */
+      color: #6B3F69;
+    }
+    .menuBox{
+      display: flex;
+      align-items: center;
+      
+      .menuBoxInner{
+        .menuItem{
+          cursor: pointer;
+          margin-left: 20px;
+          transition: all 0.3s ease-in-out;
+          position: relative;
+          &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1.5px;
+            bottom: -2px;
+            left: 0;
+            background-color: #6B3F69;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+          }
+          &:hover::after{
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  .footInner{
+    padding: 30px;
+
+    .githubBtn,
+    .linkedInBtn{
+      font-size: 20pt;
+      padding: 10px;
+      border-radius: 100px;
+      background: #FFF;
+      box-shadow: 5px 5px 10px #D9CFC7;
+    }
+    .githubBtn{
+      margin-right: 10px;
+    }
+  }
+}
+
+
+@media (max-width : 700px) {
+  .header{
+    background-color: #F9F8F6;
+    .headInner{
+      .menuBox{
+        .menuClickBtnBox{
+          cursor: pointer;
+          display: block;
+          width: 30px;
+          height: 30px;
+          position: relative;
+          z-index: 1;
+          .menuClickBtn{
+            position: absolute;
+            top: 5px;
+            right: 2px;
+            width: 25px;
+            height: 2px;
+            background-color: #6B3F69;
+            transition: all 0.3s ease-in-out;
+            &:nth-child(2){
+              top: 15px;
+            }
+            &:nth-child(3){
+              top: 25px;
+            }
+          }
+          &.click{
+            .menuClickBtn{
+              top: 50%;
+              transform: translate(-50%,-50%);
+              &:nth-child(1){
+                transform: rotate(-45deg);
+              }
+              &:nth-child(2){
+                background-color: transparent;
+                transform: rotate(-45deg);
+              }
+              &:last-child{
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+        .menuBoxInner{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          position: fixed;
+          width: 400px;
+          height: 100%;
+          top: 0;
+          right: -400px;
+          background-color: #EFE9E3;
+          transition: right 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+          &.click{
+            right: 0;
+          }
+          .menuItem{
+            font-size: 20pt;
+            margin-bottom: 20px;
+            margin-left: 30px;
+            &::after{
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 1.5px;
+              bottom: -2px;
+              left: 0;
+              background-color: #6B3F69;
+              transform: scaleX(0);
+              transition: transform 0.3s ease-in-out;
+            }
+            &:hover::after{
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+    }
+    .mobileHeaderBack{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      opacity: 0.7;
+      z-index: -1;
+    }
+  }
+}
