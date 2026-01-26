@@ -9,13 +9,16 @@ function ResumePage(){
       <h1 className='innerTitle'>Résumé</h1>
       <div className="innerContainer resume">
         <div className="resumeBox resumeLeft">
-          {/* <Document file="/Dayeon_Resume.pdf">
+          <Document  className="resumeViewer" file="/Dayeon_Resume.pdf">
             <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false} />
-          </Document> */}
-          <iframe  className="resumeViewer"
+          </Document>
+          {/* <iframe  className="resumeViewer"
             src="/Dayeon_Resume.pdf" 
             title="Resume Viewer"
-          />
+          /> */}
+        </div>
+        <div className="resumeBox resumeRight">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia repudiandae, ad ipsam quis iusto quam dolorem obcaecati tenetur reiciendis quos commodi debitis delectus ea aliquid quibusdam officiis magni dicta maiores!</p>
         </div>
       </div>
       <Link to="/contact" className='nextPageBtn'>Let's move to Contact <i className="bi bi-chevron-right nextBtnIcon"></i></Link>

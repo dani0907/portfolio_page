@@ -193,20 +193,95 @@ body{
       align-items: center;
       justify-content: center;
       .resumeBox{
-        width: 80%;
+        width: 50%;
         min-width: 800px;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         .resumeViewer{
-          width: 100%;
-          height: 800px;
+          /* width: 100%;
+          height: 800px; */
         }
       }
       
     }
     &.contact{
-
+      .contactInner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .contactText{
+          font-size: 17pt;
+          margin-bottom: 20px;
+        }
+        .emailTxt{
+          margin-bottom: 40px;
+        }
+        .linkBtnBox{
+          display: flex;
+          flex-direction: row;
+          .emailBtn, .emailCopyBtn,.githubBtn,.linkedInBtn {
+            cursor: pointer;
+            font-size: 15pt;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background-color: #EFE9E3;
+            transition: all 0.3s ease-in-out;
+            margin-right: 20px;
+            &:hover{
+              background-color: #D9CFC7;
+            }
+          }
+        }
+      }
     }
+  }
+
+
+  @media (max-width : 700px) {
+    .innerContainer{
+      &.project{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 30px;
+        .projectLinkBox{
+          width: 100%;
+          align-items: stretch;
+        }
+      }
+      &.resume{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .resumeBox{
+          width: 800px;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .resumeViewer{
+            /* width: 100%;
+            height: 800px; */
+          }
+        }
+      }
+      &.contact{
+        .contactInner{
+          .linkBtnBox{
+            flex-direction: column;
+            .emailBtn, .emailCopyBtn,.githubBtn,.linkedInBtn {
+              margin-right: 0;
+              margin-bottom: 20px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  
   }

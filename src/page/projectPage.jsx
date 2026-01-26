@@ -40,7 +40,7 @@ function ProjectPage(){
       prjoectSkills : ['React','JavaScript','HTML','CSS','Supabase(PostgreSQL)']
     },
     {projectNm : 'Flats rental website',
-      projectInfo : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem!',
+      projectInfo : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem!',
       projectImg: '/image/test.jpeg',
       prjoectSkills : ['React','JavaScript','HTML','CSS','Supabase(PostgreSQL)']
     },
