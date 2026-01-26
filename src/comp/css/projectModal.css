@@ -20,19 +20,29 @@
     }
     .pModalMain{
       padding: 20px 30px;
-      .pModalImg{
+      >*{
         margin-bottom: 20px;
+        display: block;
+      }
+      .pModalImg{
         width: 100%;
         object-fit: cover;
       }
       .pModalTitle{
         font-size: 20pt;
         font-weight: 500;
-        margin-bottom: 20px;
       }
-      .pModalInfo{
-        margin-bottom: 20px;
+      .projectLinkBox{
+        font-weight: 500;
+        .projectLink{
+          transition: 0.3s all ease-in-out;
+          font-weight: 400;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
       }
+      
       .mProjectSkill{
         display: flex;
         align-items: center;

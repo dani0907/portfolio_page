@@ -5,7 +5,9 @@ function AboutPage(){
       <h1 className='innerTitle'>About Me</h1>
       <div className="innerContainer aboutMe">
         <div className="aboutConLeft">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque reprehenderit molestiae aliquam vel, commodi minus sunt ipsa iusto incidunt doloribus natus dicta, voluptatem ad ullam, earum porro laboriosam eum laudantium.
+          Full-Stack Developer with 3+ years of experience specializing in robust enterprise solutions.<br/><br/>
+          I have a proven track record of managing large-scale data systems, including batch processing for over 150,000 customers in the insurance industry. I excel at translating complex client requirements into both brand-new software modules and optimized system enhancements, ensuring they align perfectly with business goals.<br/><br/>
+          I take pride in my proactive approach to troubleshooting; I enjoy diving deep into code and logs to provide rapid, effective solutions for technical inquiries from business stakeholders. My goal is to build seamless, user-centric applications while maintaining the highest standards of backend stability and operational continuity.
         </div>
         <div className="aboutConRight">
           <h3 className='miniTitle'>Skills</h3>

@@ -209,6 +209,9 @@ body{
           }
           .summaryBox{
             margin-bottom: 20px;
+            >*{
+              margin-bottom: 15px;
+            }
             .summaryBold{
               font-weight: 500;
             }
