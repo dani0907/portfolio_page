@@ -11,6 +11,7 @@ function AboutPage(){
           <h3 className='miniTitle'>Skills</h3>
           <div className='skillsBox'>
             <span>Java</span>
+            <span>Spring Boot</span>
             <span>SQL(Oracle, Tibero)</span>
             <span>HTML</span>
             <span>CSS</span>
@@ -20,7 +21,6 @@ function AboutPage(){
             <span>GIT</span>
             <span>Github</span>
             <span>SVN</span>
-            <span>Spring Boot</span>
           </div>
         </div>
       </div>

@@ -33,6 +33,17 @@
       .pModalInfo{
         margin-bottom: 20px;
       }
+      .mProjectSkill{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        >span{
+          padding: 5px 7px;
+          border-radius: 10px;
+          background: #EFE9E3;
+        }
+      }
     }
   }
   .modalBackground{

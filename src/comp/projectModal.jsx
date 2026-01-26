@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 function SkillList({skillData}){
   return(
-    <div className='projectSkill'>
+    <div className='mProjectSkill'>
       {
          skillData && skillData.map((item,index)=>(
            <span key={index}>{item}</span>

@@ -18,7 +18,13 @@ function ResumePage(){
           /> */}
         </div>
         <div className="resumeBox resumeRight">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia repudiandae, ad ipsam quis iusto quam dolorem obcaecati tenetur reiciendis quos commodi debitis delectus ea aliquid quibusdam officiis magni dicta maiores!</p>
+          <h4 className="summaryTitle">Summary</h4>
+          <div className="summaryBox">
+            <p><span className="summaryBold">Problem Solver</span> : Resolved critical system bugs in insurance domain.</p>
+            <p><span className="summaryBold">Tech Stack</span> : Java, Spring, React, Oracle/Tibero, HTML, CSS, SCSS.</p>
+            <p><span className="summaryBold">Location</span> : Available for in-person work in Vancouver.</p>
+          </div>
+          <a className="resumeDownBtn" href="/Dayeon_Resume.pdf" download="Dayeon_Resume_Software_Engineer.pdf"><i className="bi bi-download"></i> Download Resume</a>
         </div>
       </div>
       <Link to="/contact" className='nextPageBtn'>Let's move to Contact <i className="bi bi-chevron-right nextBtnIcon"></i></Link>

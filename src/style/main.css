@@ -192,16 +192,36 @@ body{
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      gap: 30px;
       .resumeBox{
-        width: 50%;
-        min-width: 800px;
+        flex: 1;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        .resumeViewer{
-          /* width: 100%;
-          height: 800px; */
+        &.resumeRight{
+          flex-direction: column;
+          /* align-items: baseline; */
+          .summaryTitle{
+            font-size: 17pt;
+            font-weight: 500;
+            margin-bottom: 20px;
+          }
+          .summaryBox{
+            margin-bottom: 20px;
+            .summaryBold{
+              font-weight: 500;
+            }
+          }
+          .resumeDownBtn{
+            padding: 10px 20px;
+            border-radius: 30px;
+            background-color: #EFE9E3;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+              background-color: #D9CFC7;
+            }
+          }
         }
       }
       
@@ -238,8 +258,34 @@ body{
       }
     }
   }
-
-
+  @media (max-width : 1000px) {
+    .innerContainer{
+      &.resume{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        .resumeBox{
+          flex: 1;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px;
+        }
+      }
+      &.contact{
+        .contactInner{
+          .linkBtnBox{
+            .emailBtn, .emailCopyBtn,.githubBtn,.linkedInBtn {
+              font-size: 12pt;
+            }
+          }
+        }
+      }
+    }
+  }
   @media (max-width : 700px) {
     .innerContainer{
       &.project{
@@ -253,23 +299,6 @@ body{
           align-items: stretch;
         }
       }
-      &.resume{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        .resumeBox{
-          width: 800px;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          .resumeViewer{
-            /* width: 100%;
-            height: 800px; */
-          }
-        }
-      }
       &.contact{
         .contactInner{
           .linkBtnBox{
@@ -277,6 +306,7 @@ body{
             .emailBtn, .emailCopyBtn,.githubBtn,.linkedInBtn {
               margin-right: 0;
               margin-bottom: 20px;
+              font-size: 15pt;
               text-align: center;
             }
           }

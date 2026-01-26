@@ -37,22 +37,30 @@ function ProjectPage(){
     {projectNm : 'Tea Selection',
       projectInfo : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem!',
       projectImg: '/image/test.jpeg',
+      projectLink:'',
+      projectGithub:'',
       prjoectSkills : ['React','JavaScript','HTML','CSS','Supabase(PostgreSQL)']
     },
     {projectNm : 'Flats rental website',
       projectInfo : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem!',
       projectImg: '/image/test.jpeg',
+      projectLink:'',
+      projectGithub:'',
       prjoectSkills : ['React','JavaScript','HTML','CSS','Supabase(PostgreSQL)']
     },
     {projectNm : 'Portfolio web site',
       projectInfo : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem!',
       projectImg: '/image/test.jpeg',
+      projectLink:'',
+      projectGithub:'',
       prjoectSkills : ['React','JavaScript','HTML','CSS','Supabase(PostgreSQL)']
     },
     {projectNm : 'Heungkuk Insurance Web site',
       projectInfo : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem!',
       projectImg: '/image/test.jpeg',
-      prjoectSkills : ['Java','SQL(Oracle, tibero)','HTML','CSS','JavaScript']
+      projectLink:'',
+      projectGithub:'',
+      prjoectSkills : ['Java', 'Spring','SQL(Oracle, tibero)','HTML','CSS','JavaScript']
     }
   ];
 
@@ -65,50 +73,7 @@ function ProjectPage(){
     <div className="mainInner">
       <h1 className='innerTitle'>Project</h1>
       <div className="innerContainer project">
-        
         <ProjectBox projectList = {projectList} modalControl={modalControl}></ProjectBox>
-        {/* <Link className='projectLinkBox'>
-          <div className="projectbox">
-            <img className='projectImg' src="/image/test.jpeg" alt="" />
-            <span className='projectNm'>Flats rental website</span>
-            <p className='projectInfo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem!</p>
-            <div className='projectSkill'>
-              <span>jQuery</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Bootstrap</span>
-            </div>
-          </div>
-        </Link>
-        <Link className='projectLinkBox'>
-          <div className="projectbox">
-            <img className='projectImg' src="/image/test.jpeg" alt="" />
-            <span className='projectNm'>Portfolio web site</span>
-            <p className='projectInfo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem!</p>
-            <div className='projectSkill'>
-              <span>React</span>
-              <span>JavaScript</span>
-              <span>HTML</span>
-              <span>CSS</span>
-            </div>
-          </div>
-        </Link>
-        <Link className='projectLinkBox'>
-          <div className="projectbox">
-            <img className='projectImg' src="/image/test.jpeg" alt="" />
-            <span className='projectNm'>Project Name</span>
-            <p className='projectInfo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem!</p>
-            <div className='projectSkill'>
-              <span>Java</span>
-              <span>SQL(Oracle, tibero)</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>eclipse</span>
-              <span>ex</span>
-            </div>
-          </div>
-        </Link> */}
       </div>
       <Link to="/resume" className='nextPageBtn'>Let's go to my Resume <i className="bi bi-chevron-right nextBtnIcon"></i></Link>
       {
