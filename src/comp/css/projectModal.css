@@ -54,6 +54,13 @@
           background: #EFE9E3;
         }
       }
+      .pModalRole{
+        font-size: 15pt;
+        font-weight: 500;
+      }
+      .mFeatureName{
+        font-weight: 500;
+      }
     }
   }
   .modalBackground{

@@ -161,6 +161,8 @@ body{
         }
         .projectImg{
           margin-bottom: 20px;
+          aspect-ratio: 1 / 1;
+          object-fit: contain;
         }
         .projectNm{
           margin-bottom: 20px;
