@@ -265,6 +265,15 @@ body{
   }
   @media (max-width : 1000px) {
     .innerContainer{
+      &.aboutMe{  
+        flex-direction: column;
+        .aboutConLeft{
+          width: 100%;
+        }
+        .aboutConRight{
+          width: 100%;
+        }
+      }
       &.resume{
         display: flex;
         flex-direction: column-reverse;
