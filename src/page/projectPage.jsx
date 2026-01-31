@@ -69,7 +69,7 @@ function ProjectPage(){
       projectFeature : [],
       projectLink:'',
       projectGithub:'https://github.com/dani0907/portfolio_page',
-      prjoectSkills : ['React','JavaScript','HTML','CSS','Supabase(PostgreSQL)']
+      prjoectSkills : ['React','JavaScript','HTML','CSS/SCSS']
     }
     
   ];
