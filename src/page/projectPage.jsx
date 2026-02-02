@@ -34,7 +34,7 @@ function ProjectPage(){
   const [modalOpen,setModalOpen]=useState(false);
   const [modalSendData,setModalSendData] = useState();
   const projectList=[
-    {projectNm : 'Heunguk Life Insurance Channel System (e-Life)',
+    {projectNm : 'Heungkuk Life Insurance Channel System (e-Life)',
       projectInfo : 'Managed the maintenance and enhancement of the "e-Life" channel system, a mission-critical platform for insurance planners and business stakeholders. Worked across diverse modules, including Customer Management, Common Services, and Insurance Application.',
       projectImg: '/image/heungkukLogo.jpeg',
       projectRole : 'Full-Stack Developer (Maintenance & Development)',
@@ -54,7 +54,7 @@ function ProjectPage(){
       projectGithub:'https://github.com/dani0907/project_teashop',
       prjoectSkills : ['React','JavaScript','HTML','CSS','Supabase(BaaS)','Recharts']
     },
-    {projectNm : 'manage your schedule [In Progress]',
+    {projectNm : 'Kanban board [In Progress]',
       projectInfo : 'A high-performance, responsive Kanban board built with React and Spring Boot, offering an intuitive UI and lightning-fast responsiveness across web and mobile.',
       projectImg: '/image/kanbanboard.png',
       projectRole : 'Solo Developer (Full-Stack)',
