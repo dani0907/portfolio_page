@@ -55,17 +55,19 @@ function ProjectPage(){
       prjoectSkills : ['React','JavaScript','HTML','CSS','Supabase(BaaS)','Recharts']
     },
     {projectNm : 'manage your schedule [In Progress]',
-      projectInfo : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem!',
+      projectInfo : 'A high-performance, responsive Kanban board built with React and Spring Boot, offering an intuitive UI and lightning-fast responsiveness across web and mobile.',
       projectImg: '/image/kanbanboard.png',
       projectRole : 'Solo Developer (Full-Stack)',
-      projectFeature : [],
+      projectFeature : [{name : 'Real-time Collaboration', data:'Utilizing WebSockets for instant task synchronization among team members.'},
+                        {name : 'Mobile Optimization', data:'Further refining the responsive UI for a native-app-like mobile experience.'}],
       projectLink:'',
       projectGithub:'https://github.com/dani0907/project_kanban',
-      prjoectSkills : ['React','Spring boot','Java','SQL(PostgreSQL)','JavaScript','HTML','CSS','SCSS']
+      prjoectSkills : ['React','Spring boot','Java','SQL(PostgreSQL)','JavaScript','HTML','Tailwind CSS']
     },
     {projectNm : 'Portfolio web site',
-      projectInfo : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem!',
+      projectInfo : 'A fully responsive portfolio website designed for both web and mobile platforms. Built with React, it ensures a fast and fluid user experience through component-based architecture and optimized performance.',
       projectImg: '/image/portfolioPage.png',
+      projectRole : '',
       projectFeature : [],
       projectLink:'',
       projectGithub:'https://github.com/dani0907/portfolio_page',

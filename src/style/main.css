@@ -134,7 +134,7 @@ body{
       }
     }
     &.project{
-      width: 1000px;
+      max-width: 1000px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -164,6 +164,9 @@ body{
           margin-bottom: 20px;
           aspect-ratio: 1 / 1;
           object-fit: contain;
+          /* background-color: #EFE9E3; */
+          border-radius: 10px;
+          /* border: 2px solid #EFE9E3; */
         }
         .projectNm{
           margin-bottom: 20px;
@@ -305,12 +308,14 @@ body{
     .innerContainer{
       &.project{
         display: flex;
+        width: 100%;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
         row-gap: 30px;
         .projectLinkBox{
-          width: 100%;
+          width: 80%;
+          margin: auto;
           align-items: stretch;
         }
       }
