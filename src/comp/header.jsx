@@ -3,6 +3,12 @@ import { useState } from "react";
 
 function Header(){
   const [menuClick, setMenuClick] = useState(false);
+
+  function mobileMenuClick(){
+    if (window.innerWidth <= 700) {
+      setMenuClick(false);
+    }
+  }
   return (
     <header className="header">
       <div className="headInner">
@@ -18,9 +24,9 @@ function Header(){
             <span className='menuClickBtn'></span>
           </button>
           <div className={`menuBoxInner ${menuClick? 'click' : ''}`}>
-            <Link to="/about" className='menuItem'>About</Link>
-            <Link to="/project" className='menuItem'>Project</Link>
-            <Link to="/contact" className='menuItem'>Contact</Link>
+            <Link to="/about" onClick={mobileMenuClick} className='menuItem'>About</Link>
+            <Link to="/project" onClick={mobileMenuClick} className='menuItem'>Project</Link>
+            <Link to="/contact" onClick={mobileMenuClick} className='menuItem'>Contact</Link>
           </div>
         </div>
       </div>
