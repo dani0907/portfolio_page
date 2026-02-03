@@ -50,7 +50,7 @@ function ProjectPage(){
       projectImg: '/image/teaselection.png',
       projectRole : 'Solo Developer (Full-Stack)',
       projectFeature : [{name : 'User Storefront' , data:' Provides a seamless shopping journey with advanced product filtering, search capabilities, and a responsive checkout process.'},{name :'Admin Dashboard' ,data : 'A centralized management hub featuring real-time sales analytics, inventory tracking, and data visualization to monitor business growth effectively.'}],
-      projectLink:'',
+      projectLink:'https://tea-selection.vercel.app',
       projectGithub:'https://github.com/dani0907/project_teashop',
       prjoectSkills : ['React','JavaScript','HTML','CSS','Supabase(BaaS)','Recharts']
     },
