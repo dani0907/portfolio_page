@@ -23,7 +23,7 @@ function ResumePage(){
             <p><span className="summaryBold">Tech Stack</span> : Java, Spring, SQL (Oracle/Tibero/PostgreSQL), HTML5, CSS3/SCSS, JavaScript, jQuery, TypeScript, React, Angular.</p>
             <p><span className="summaryBold">Location</span> : Vancouver, BC (Open to In-person/Hybrid)</p>
           </div>
-          <a className="resumeDownBtn" href="/Dayeon_Resume.pdf" download="Dayeon_Resume_Software_Engineer.pdf"><i className="bi bi-download"></i> Download Resume</a>
+          <a className="resumeDownBtn" href="/Dayeon_Resume.pdf" download="Dayeon_Lee_Resume_Fullstack_Software_Engineer.pdf"><i className="bi bi-download"></i> Download Resume</a>
         </div>
       </div>
       <Link to="/contact" className='nextPageBtn'>Let's move to Contact <i className="bi bi-chevron-right nextBtnIcon"></i></Link>
