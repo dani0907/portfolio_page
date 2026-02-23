@@ -17,7 +17,7 @@ function ResumePage(){
           <h4 className="summaryTitle">Summary</h4>
           <div className="summaryBox">
             <p>Full-Stack Developer with 3+ years of experience in the insurance sector, specializing in large-scale data processing and scalable web applications.</p>
-            <p><span className="summaryBold">Large-Scale Data Management</span> : Managed batch processing for 150,000+ users, ensuring zero data loss and high performance.</p>
+            <p><span className="summaryBold">Large-Scale Data Management</span> : Managed batch processing for 150,000+ insurance agent records, ensuring zero data loss and high performance.</p>
             <p><span className="summaryBold">Strategic Development & Enhancement</span> : Developed new software modules and delivered tailored enhancements by collaborating directly with business stakeholders to meet evolving requirements.</p>
             <p><span className="summaryBold">Expert Troubleshooting & Support</span> : Effectively addressed technical inquiries from business stakeholders by conducting thorough source code and log analysis, providing rapid fixes to maintain high operational efficiency.</p>
             <p><span className="summaryBold">Tech Stack</span> : Java, Spring, SQL (Oracle/Tibero/PostgreSQL), HTML5, CSS3/SCSS, JavaScript, jQuery, TypeScript, React, Angular.</p>

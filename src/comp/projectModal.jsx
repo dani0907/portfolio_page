@@ -46,7 +46,7 @@ function ProjectModal({modalControl,modalData}){
           {
             modalData.projectLink ? <div className="projectLinkBox"><i class="bi bi-cursor-fill"></i> <span>Live Demo : </span> <a className="projectLink" href={modalData.projectLink} target="_blank">{modalData.projectLink}</a></div> : null
           }
-          <SkillList skillData={modalData.prjoectSkills}></SkillList>
+          <SkillList skillData={modalData.projectSkills}></SkillList>
         </div>
       </div>
       <div className="modalBackground" onClick={modalControl}></div>
