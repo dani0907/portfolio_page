@@ -6,7 +6,7 @@ function AboutPage(){
       <div className="innerContainer aboutMe">
         <div className="aboutConLeft">
           Full-Stack Developer with 3+ years of experience specializing in robust enterprise solutions.<br/><br/>
-          I have a proven track record of managing large-scale data systems, including batch processing for over 150,000 insurance planners in the insurance industry.<br/>I excel at translating complex client requirements into both brand-new software modules and optimized system enhancements, ensuring they align perfectly with business goals.<br/><br/>
+          I have a proven track record of managing large-scale data systems, including batch processing for over 150,000 insurance agent records.<br/>I excel at translating complex client requirements into both brand-new software modules and optimized system enhancements, ensuring they align perfectly with business goals.<br/><br/>
           I take pride in my proactive approach to troubleshooting. I excel at performing deep-dive analyses of code and logs to deliver rapid, effective solutions for business stakeholders. My goal is to build seamless, user-centric applications while maintaining the highest standards of backend stability and operational continuity.
         </div>
         <div className="aboutConRight">
