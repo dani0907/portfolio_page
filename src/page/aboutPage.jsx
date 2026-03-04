@@ -1,37 +1,55 @@
 import { Link } from "react-router-dom";
+
 function AboutPage(){
+  const skills = {
+    "Back-end": ["Java", "Spring Boot", "SQL (Oracle, Tibero, PostgreSQL)"],
+    "Front-end": ["HTML5", "CSS3/SCSS", "JavaScript", "TypeScript", "jQuery", "React", "Angular"],
+    "Tools & Infra": ["Git", "GitHub", "SVN"],
+    "Enterprise": ["BXM", "ProObject", "eXBuilder6", "NCRM"],
+  };
+
   return (
     <div className="mainInner">
       <h1 className='innerTitle'>About Me</h1>
       <div className="innerContainer aboutMe">
+
         <div className="aboutConLeft">
-          Full-Stack Developer with 3 years of experience specializing in robust enterprise solutions.<br/><br/>
-          I have a proven track record of managing large-scale data systems, including batch processing for over 150,000 insurance agent records.<br/>I excel at translating complex client requirements into both brand-new software modules and optimized system enhancements, ensuring they align perfectly with business goals.<br/><br/>
-          I take pride in my proactive approach to troubleshooting. I excel at performing deep-dive analyses of code and logs to deliver rapid, effective solutions for business stakeholders. My goal is to build seamless, user-centric applications while maintaining the highest standards of backend stability and operational continuity.
+          <p className="aboutHighlight">
+            Full-Stack Developer with <span className="pointColor">3 years</span> of enterprise experience.
+          </p>
+          <p>
+            Specialized in robust enterprise solutions — I have a proven track record of managing
+            large-scale data systems, including batch processing for over{" "}
+            <span className="pointColor">150,000+ insurance agent records</span>.
+          </p>
+          <p>
+            I excel at translating complex client requirements into both brand-new software modules
+            and optimized system enhancements, ensuring they align perfectly with business goals.
+          </p>
+          <p>
+            I take pride in my proactive approach to troubleshooting — performing deep-dive analyses
+            of code and logs to deliver rapid, effective solutions for business stakeholders.
+          </p>
         </div>
+
         <div className="aboutConRight">
           <h3 className='miniTitle'>Skills</h3>
-          <div className='skillsBox'>
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>SQL(Oracle, Tibero, PostgreSQL)</span>
-            <span>HTML5</span>
-            <span>CSS3/SCSS</span>
-            <span>JavaScript</span>
-            <span>jQuery</span>
-            <span>Typescript</span>
-            <span>React</span>
-            <span>Angular</span>
-            <span>Enterprise Banking Frameworks (BXM, ProObject)</span>
-            <span>eXBuilder6</span>
-            <span>NCRM</span>
-            <span>GIT</span>
-            <span>Github</span>
-            <span>SVN</span>
-          </div>
+          {Object.entries(skills).map(([category, items]) => (
+            <div className="skillCategory" key={category}>
+              <span className="skillCategoryLabel">{category}</span>
+              <div className="skillsBox">
+                {items.map((skill, i) => (
+                  <span key={i}>{skill}</span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
+
       </div>
-      <Link to="/project" className='nextPageBtn'>Let's continue to Project <i className="bi bi-chevron-right nextBtnIcon"></i></Link>
+      <Link to="/project" className='nextPageBtn mainCta'>
+        Let's continue to Project <i className="bi bi-chevron-right nextBtnIcon"></i>
+      </Link>
     </div>
   )
 }

@@ -1,109 +1,128 @@
 import { Link } from "react-router-dom";
 import ProjectModal from "../comp/projectModal";
 import { useState } from "react";
-function SkillList({skillList}){
-  return(
-    <div className='projectSkill'>
-      {
-         skillList.map((item,index)=>(
-           <span key={index}>{item}</span>
-         ))
-      }
-    </div>
-  )
-}
-function ProjectBox({projectList,modalControl}){
 
-  return(
+function SkillList({ skillList }) {
+  return (
+    <div className='projectSkill'>
+      {skillList.map((item, index) => (
+        <span key={index}>{item}</span>
+      ))}
+    </div>
+  );
+}
+
+function ProjectBox({ projectList, modalControl }) {
+  return (
     <>
-      {projectList.map((item,index)=>(
-        <div key={index} className='projectLinkBox' onClick={()=> modalControl(item)}>
+      {projectList.map((item, index) => (
+        <div key={index} className='projectLinkBox' onClick={() => modalControl(item)}>
           <div className="projectbox">
-            <img className='projectImg' src={item.projectImg} alt="" />
-            <span className='projectNm'>{item.projectNm}</span>
+            {item.projectNm.includes("In Progress") && (
+              <span className="inProgressBadge">🚧 In Progress</span>
+            )}
+            <img className='projectImg' src={item.projectImg} alt={item.projectNm} />
+            <span className='projectNm'>
+              {item.projectNm.replace(" [In Progress]", "")}
+            </span>
             <p className='projectInfo'>{item.projectInfo}</p>
-            <SkillList skillList={item.projectSkills}></SkillList>
+            <SkillList skillList={item.projectSkills} />
           </div>
         </div>
       ))}
     </>
-  )
+  );
 }
 
-function ProjectPage(){
-  const [modalOpen,setModalOpen]=useState(false);
-  const [modalSendData,setModalSendData] = useState();
-  const projectList=[
-    {projectNm : 'Heungkuk Life Insurance Channel System (e-Life)',
-      projectInfo : 'Managed the maintenance and enhancement of the "e-Life" channel system, a mission-critical platform for insurance planners and business stakeholders. Worked across diverse modules, including Customer Management, Common Services, and Insurance Application.',
+function ProjectPage() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalSendData, setModalSendData] = useState();
+
+  const projectList = [
+    {
+      projectNm: 'Heungkuk Life Insurance Channel System (e-Life)',
+      projectInfo: 'Managed the maintenance and enhancement of the "e-Life" channel system, a mission-critical platform for insurance planners and business stakeholders.',
       projectImg: '/image/heungkukLogo.jpeg',
-      projectRole : 'Full-Stack Developer (Maintenance & Development)',
-      projectFeature : [{name :'Scalable Data Processing', data:'Developed and optimized large-scale batch systems to manage and deliver notifications to over 150,000+ policyholders with high reliability.'},
-                        {name :'Feature Development', data :'Collaborated with business stakeholders to design and implement new modules, improving operational efficiency for field agents.'},
-                        {name : 'Confidentiality Note', data : 'Due to strict non-disclosure agreements (NDA) and the enterprise nature of the project, specific source codes and internal system screenshots are not publicly disclosable.'}],
-      projectLink:'',
-      projectGithub:'',
-      projectSkills: ['Java', 'Spring boot','SQL(Oracle, tibero)','HTML','CSS','JavaScript']
-    },
-    {projectNm : 'Tea Selection',
-      projectInfo : 'This project is a full-stack e-commerce application designed for premium tea enthusiasts. It consists of two main parts User Storefront and Admin Dashboard.',
-      projectImg: '/image/teaselection.png',
-      projectRole : 'Solo Developer (Full-Stack)',
-      projectFeature : [{name : 'User Storefront' , data:' Provides a seamless shopping journey with advanced product filtering, search capabilities, and a responsive checkout process.'},{name :'Admin Dashboard' ,data : 'A centralized management hub featuring real-time sales analytics, inventory tracking, and data visualization to monitor business growth effectively.'}],
-      projectLink:'https://tea-selection.vercel.app',
-      projectGithub:'https://github.com/dani0907/project_teashop',
-      projectSkills: ['React','JavaScript','HTML','CSS','Supabase(BaaS)','Recharts']
+      projectRole: 'Full-Stack Developer (Maintenance & Development)',
+      projectFeature: [
+        { name: 'Scalable Data Processing', data: 'Developed and optimized large-scale batch systems to manage and deliver notifications to over 150,000+ policyholders with high reliability.' },
+        { name: 'Feature Development', data: 'Collaborated with business stakeholders to design and implement new modules, improving operational efficiency for field agents.' },
+        { name: 'Confidentiality Note', data: 'Due to strict NDA and the enterprise nature of the project, specific source codes and internal screenshots are not publicly disclosable.' },
+      ],
+      projectLink: '',
+      projectGithub: '',
+      projectSkills: ['Java', 'Spring Boot', 'SQL (Oracle, Tibero)', 'HTML', 'CSS', 'JavaScript'],
     },
     {
-      projectNm : 'Daily Diary [In Progress]',
-      projectInfo : 'A cozy personal diary web app to capture and save your precious daily memories. Built with Angular and Spring Boot',
+      projectNm: 'Tea Selection',
+      projectInfo: 'A full-stack e-commerce application for premium tea enthusiasts, featuring a User Storefront and Admin Dashboard.',
+      projectImg: '/image/teaselection.png',
+      projectRole: 'Solo Developer (Full-Stack)',
+      projectFeature: [
+        { name: 'User Storefront', data: 'Seamless shopping with advanced filtering, search, and responsive checkout.' },
+        { name: 'Admin Dashboard', data: 'Real-time sales analytics, inventory tracking, and data visualization.' },
+      ],
+      projectLink: 'https://tea-selection.vercel.app',
+      projectGithub: 'https://github.com/dani0907/project_teashop',
+      projectSkills: ['React', 'JavaScript', 'HTML', 'CSS', 'Supabase (BaaS)', 'Recharts'],
+    },
+    {
+      projectNm: 'Daily Diary [In Progress]',
+      projectInfo: 'A cozy personal diary web app to capture and save daily memories. Built with Angular and Spring Boot.',
       projectImg: '/image/dailydiary.png',
-      projectRole : 'Solo Developer (Full-Stack)',
-      projectFeature : [{name : 'Real-time Collaboration', data:'Utilizing WebSockets for instant task synchronization among team members.'},
-                        {name : 'Mobile Optimization', data:'Further refining the responsive UI for a native-app-like mobile experience.'}],
-      projectLink:'',
-      projectGithub:'https://github.com/dani0907/monthlyDiary',
-      projectSkills: ['Angular','Spring boot','Java','SQL(PostgreSQL)','TypeScript','HTML','CSS/SCSS']
+      projectRole: 'Solo Developer (Full-Stack)',
+      projectFeature: [
+        { name: 'Real-time Collaboration', data: 'Utilizing WebSockets for instant task synchronization.' },
+        { name: 'Mobile Optimization', data: 'Responsive UI for a native-app-like mobile experience.' },
+      ],
+      projectLink: '',
+      projectGithub: 'https://github.com/dani0907/monthlyDiary',
+      projectSkills: ['Angular', 'Spring Boot', 'Java', 'SQL (PostgreSQL)', 'TypeScript', 'HTML', 'CSS/SCSS'],
     },
-    {projectNm : 'Kanban board [In Progress]',
-      projectInfo : 'A high-performance, responsive Kanban board built with React and Spring Boot, offering an intuitive UI and lightning-fast responsiveness across web and mobile.',
+    {
+      projectNm: 'Kanban Board [In Progress]',
+      projectInfo: 'A high-performance, responsive Kanban board built with React and Spring Boot, offering intuitive UI across web and mobile.',
       projectImg: '/image/kanbanboard.png',
-      projectRole : 'Solo Developer (Full-Stack)',
-      projectFeature : [{name : 'Real-time Collaboration', data:'Utilizing WebSockets for instant task synchronization among team members.'},
-                        {name : 'Mobile Optimization', data:'Further refining the responsive UI for a native-app-like mobile experience.'}],
-      projectLink:'',
-      projectGithub:'https://github.com/dani0907/project_kanban',
-      projectSkills: ['React','Spring boot','Java','SQL(PostgreSQL)','JavaScript','HTML','Tailwind CSS']
+      projectRole: 'Solo Developer (Full-Stack)',
+      projectFeature: [
+        { name: 'Real-time Collaboration', data: 'WebSockets for instant task synchronization among team members.' },
+        { name: 'Mobile Optimization', data: 'Responsive UI for a native-app-like mobile experience.' },
+      ],
+      projectLink: '',
+      projectGithub: 'https://github.com/dani0907/project_kanban',
+      projectSkills: ['React', 'Spring Boot', 'Java', 'SQL (PostgreSQL)', 'JavaScript', 'HTML', 'Tailwind CSS'],
     },
-    {projectNm : 'Portfolio web site',
-      projectInfo : 'A fully responsive portfolio website designed for both web and mobile platforms. Built with React, it ensures a fast and fluid user experience through component-based architecture and optimized performance.',
+    {
+      projectNm: 'Portfolio Website',
+      projectInfo: 'A fully responsive portfolio website built with React, featuring component-based architecture and optimized performance.',
       projectImg: '/image/portfolioPage.png',
-      projectRole : '',
-      projectFeature : [],
-      projectLink:'',
-      projectGithub:'https://github.com/dani0907/portfolio_page',
-      projectSkills: ['React','JavaScript','HTML','CSS/SCSS']
-    }
-    
+      projectRole: '',
+      projectFeature: [],
+      projectLink: '',
+      projectGithub: 'https://github.com/dani0907/portfolio_page',
+      projectSkills: ['React', 'JavaScript', 'HTML', 'CSS/SCSS'],
+    },
   ];
 
-  function modalControl(modalData){
-    setModalOpen(modalOpen ? false : true);
+  function modalControl(modalData) {
+    setModalOpen(prev => !prev);
     setModalSendData(modalData);
-    console.log("modalData : ",modalData);
   }
+
   return (
     <div className="mainInner">
       <h1 className='innerTitle'>Project</h1>
       <div className="innerContainer project">
-        <ProjectBox projectList = {projectList} modalControl={modalControl}></ProjectBox>
+        <ProjectBox projectList={projectList} modalControl={modalControl} />
       </div>
-      <Link to="/resume" className='nextPageBtn'>Let's go to my Resume <i className="bi bi-chevron-right nextBtnIcon"></i></Link>
-      {
-        modalOpen ? <ProjectModal modalControl={modalControl} modalData={modalSendData}></ProjectModal> : null
-      }
+      <Link to="/resume" className='nextPageBtn mainCta'>
+        Let's go to my Resume <i className="bi bi-chevron-right nextBtnIcon"></i>
+      </Link>
+      {modalOpen && (
+        <ProjectModal modalControl={modalControl} modalData={modalSendData} />
+      )}
     </div>
-  )
+  );
 }
 
 export default ProjectPage;

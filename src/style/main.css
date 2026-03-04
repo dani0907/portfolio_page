@@ -6,6 +6,19 @@
   50% { transform: translateX(10px); }
   100% { transform: translateX(0); } 
 }
+/* ==============================
+   common point color
+============================== */
+:root {
+  --point: #6B4C7A;
+  --point-light: #9B7DB0;
+  --point-bg: #F3EEF7;
+}
+
+.pointColor {
+  color: var(--point);
+  font-weight: 600;
+}
 
 *, *:after,*:before{
   -webkit-box-sizing: border-box;
@@ -38,6 +51,19 @@
 .nextBtnIcon{
   display: inline-block;
   animation: slide-left-right 1.2s infinite alternate;
+}
+.mainCta {
+  padding: 12px 28px;
+  border-radius: 999px;
+  background-color: #6B4C7A;
+  color: #FFFFFF !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #281532;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(107, 76, 122, 0.3);
+  }
 }
 
 body{
@@ -77,270 +103,527 @@ body{
   }
 }
 .innerContainer{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 70px;
+  /* **************************************** */
+  /* ******** main(first) page css ******** */
+  /* **************************************** */
+  .mainBox {
     width: 100%;
     height: 100%;
-    margin-bottom: 70px;
-    /* **************************************** */
-    /* ******** main(first) page css ******** */
-    /* **************************************** */
-    .mainBox{
-      width: 100%;
-      height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .mainBadge {
+      display: inline-block;
+      margin-bottom: 24px;
+      padding: 6px 18px;
+      border-radius: 999px;
+      border: 1.5px solid #9B7DB0;
+      color: #6B4C7A;
+      font-size: 11pt;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      background-color: #F3EEF7;
+    }
+    .mainTitle {
+      font-size: 52pt;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-align: center;
+      line-height: 1.15;
+    }
+
+    .mainNameHighlight {
+      color: #6B4C7A;
+      position: relative;
+      /* &::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #9B7DB0;
+        border-radius: 2px;
+      } */
+    }
+    .mainDivider {
+      width: 50px;
+      height: 3px;
+      background-color: #9B7DB0;
+      border-radius: 2px;
+      margin: 0 auto 24px;
+    }
+    .wordRotateText {
+      font-size: 18pt;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #281532;
+      font-weight: 400;
+    }
+
+    .mainSubDesc {
+      font-size: 11pt;
+      color: #8A7E8A;
+      letter-spacing: 0.04em;
+      margin-bottom: 60px;
+    }
+  }
+  /* **************************************** */
+  /* ******** about me page css ******** */
+  /* **************************************** */
+  &.aboutMe{
+    display: flex;
+    flex-direction: row;
+    .aboutConRight{
+      width: 50%;
+      padding: 20px 50px;
+      .miniTitle{
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .skillsBox{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        >span{
+          padding: 5px;
+          background-color: #EFE9E3;
+          border-radius: 10px;
+          
+        }
+      }
+    }
+    .aboutConLeft{
+      width: 50%;
+      padding: 20px 50px;
+    }
+    .aboutConLeft {
+      > p {
+        margin-bottom: 18px;
+        line-height: 1.8;
+      }
+      .aboutHighlight {
+        font-size: 13pt;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+    }
+
+    .skillCategory {
+      margin-bottom: 16px;
+    }
+
+    .skillCategoryLabel {
+      display: inline-block;
+      font-size: 9pt;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--point);
+      margin-bottom: 8px;
+    }
+
+    .skillsBox > span {
+      padding: 5px 10px;
+      background-color: #EFE9E3;
+      border-radius: 10px;
+      font-size: 10pt;
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: var(--point-bg);
+        color: var(--point);
+      }
+    }
+    
+  }
+  &.project{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+    .projectLinkBox{
+      width: 48%;
+      align-items: stretch;
+    }
+    .projectbox{
+      cursor: pointer;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      .mainTitle{
-        font-size: 30pt;
-        font-weight: 500;
-        margin-bottom: 20px;
+      width: 100%;
+      height: 100%;
+      padding: 30px 20px;
+      background: #FFFFFF;
+      border-radius: 10px;
+      position: relative;
+      border-left: 3px solid transparent;
+      transition: all 0.3s ease, border-color 0.3s ease;
+      &:hover{
+        transform: translateY(-10px);
+        box-shadow: 5px 5px 10px #D9CFC7;
+        border-left: 3px solid var(--point);
+        box-shadow: 5px 5px 20px rgba(107, 76, 122, 0.15);
       }
-      .wordRotateText{
-        font-size: 20pt;
-        margin-bottom: 100px;
+      .inProgressBadge {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        font-size: 9pt;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background-color: var(--point-bg);
+        color: var(--point);
+        font-weight: 600;
+        border: 1px solid var(--point-light);
+      }
+      .projectImg{
+        margin-bottom: 20px;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        /* background-color: #EFE9E3; */
+        border-radius: 10px;
+        /* border: 2px solid #EFE9E3; */
+      }
+      .projectNm{
+        color: #281532;
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 16.5pt;
         text-align: center;
       }
-    }
-    /* **************************************** */
-    /* ******** about me page css ******** */
-    /* **************************************** */
-    &.aboutMe{
-      display: flex;
-      flex-direction: row;
-      .aboutConLeft{
-        width: 50%;
-        padding: 20px 50px;
+      .projectInfo{
+        margin-bottom: 20px;
+        text-align: center;
       }
-      .aboutConRight{
-        width: 50%;
-        padding: 20px 50px;
-        .miniTitle{
-          font-size: 20px;
-          font-weight: 500;
-          margin-bottom: 10px;
-          text-align: center;
+      .projectSkill{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        transition: background-color 0.2s;
+        >span{
+          background-color: var(--point-bg);
+          color: var(--point);
+          padding: 5px;
+          border-radius: 10px;
         }
-        .skillsBox{
+      }
+    }
+  }
+  &.resume {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+
+    .resumeBox {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.resumeLeft {
+        width: 100%;
+        .react-pdf__Page__canvas {
+          max-width: 100%;
+          height: auto !important;
+          display: block;
+          border-radius: 8px;
+          box-shadow: 4px 4px 20px rgba(107, 76, 122, 0.12);
+        }
+      }
+
+      &.resumeRight {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+
+        .resumeIntro {
+          padding: 16px 20px;
+          border-left: 3px solid var(--point);
+          background-color: var(--point-bg);
+          border-radius: 0 8px 8px 0;
+          width: 100%;
+          .resumeIntroText {
+            font-size: 10.5pt;
+            line-height: 1.8;
+            color: #281532;
+          }
+        }
+
+        .resumeHighlights {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          width: 100%;
+        }
+
+        .resumeCard {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 14px;
+          padding: 14px 16px;
+          background: #FFFFFF;
+          border-radius: 10px;
+          border: 1px solid #EFE9E3;
+          transition: all 0.25s ease;
+          &:hover {
+            border-color: var(--point-light);
+            box-shadow: 0 4px 14px rgba(107, 76, 122, 0.1);
+            transform: translateX(4px);
+          }
+          .resumeCardIcon {
+            font-size: 18pt;
+            color: var(--point);
+            margin-top: 2px;
+            flex-shrink: 0;
+          }
+          .resumeCardTitle {
+            font-size: 10.5pt;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #281532;
+          }
+          .resumeCardDesc {
+            font-size: 9.5pt;
+            color: #6B6070;
+            line-height: 1.6;
+          }
+        }
+
+        .resumeStack {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .resumeStackLabel {
+          font-size: 9pt;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: var(--point);
+        }
+
+        .resumeStackTags {
           display: flex;
           flex-wrap: wrap;
-          gap: 10px;
-          >span{
-            padding: 5px;
+          gap: 8px;
+          margin-bottom: 6px;
+          > span {
+            padding: 4px 10px;
             background-color: #EFE9E3;
-            border-radius: 10px;
-            
+            border-radius: 999px;
+            font-size: 9.5pt;
+            transition: background-color 0.2s;
+            &:hover {
+              background-color: var(--point-bg);
+              color: var(--point);
+            }
+          }
+        }
+        .resumeDownBtn {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 11px 26px;
+          border-radius: 999px;
+          background-color: var(--point);
+          color: #FFFFFF;
+          font-weight: 500;
+          font-size: 11pt;
+          transition: all 0.3s ease;
+          margin: auto;
+          &:hover {
+            background-color: #281532;
+            box-shadow: 0 6px 20px rgba(107, 76, 122, 0.3);
+            transform: translateY(-2px);
           }
         }
       }
     }
-    &.project{
-      max-width: 1000px;
+  }
+  &.contact{
+    .contactInner{
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .contactText{
+        font-size: 22pt;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .contactSubText {
+        font-size: 11pt;
+        text-align: center;
+        color: #8A7E8A;
+        margin-bottom: 30px;
+      }
+      .emailTxt{
+        margin-bottom: 40px;
+      }
+      .linkBtnBox{
+        display: flex;
+        flex-direction: row;
+        gap: 14px;
+        margin-bottom: 16px;
+        /* .emailBtn, .emailCopyBtn,.githubBtn,.linkedInBtn {
+          cursor: pointer;
+          font-size: 15pt;
+          padding: 10px 20px;
+          border-radius: 30px;
+          background-color: #EFE9E3;
+          transition: all 0.3s ease-in-out;
+          margin-right: 20px;
+          &:hover{
+            background-color: #D9CFC7;
+          }
+        } */
+        .btnPrimary {
+          cursor: pointer;
+          font-size: 13pt;
+          padding: 12px 28px;
+          border-radius: 999px;
+          background-color: var(--point);
+          color: #FFFFFF;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          &:hover {
+            background-color: #281532;
+            box-shadow: 0 6px 20px rgba(107, 76, 122, 0.3);
+            transform: translateY(-2px);
+          }
+        }
+        .btnSecondary {
+          cursor: pointer;
+          font-size: 13pt;
+          padding: 12px 28px;
+          border-radius: 999px;
+          background-color: #EFE9E3;
+          color: #281532;
+          border: none;
+          transition: all 0.3s ease;
+          &:hover {
+            background-color: var(--point-bg);
+            color: var(--point);
+          }
+        }
+      }
+      .socialBtnBox {
+        display: flex;
+        gap: 14px;
+      }
+
+      .socialBtn {
+        font-size: 12pt;
+        padding: 8px 20px;
+        border-radius: 999px;
+        background-color: transparent;
+        border: 1.5px solid #D9CFC7;
+        color: #281532;
+        transition: all 0.3s ease;
+        &:hover {
+          border-color: var(--point-light);
+          color: var(--point);
+          background-color: var(--point-bg);
+        }
+      }
+    }
+  }
+}
+@media (max-width : 1000px) {
+  .innerContainer{
+    &.aboutMe{  
+      flex-direction: column;
+      .aboutConLeft{
+        width: 100%;
+      }
+      .aboutConRight{
+        width: 100%;
+      }
+    }
+    &.resume{
+      flex-direction: column-reverse;
+      align-items: center;
+      .resumeBox.resumeRight {
+        width: 100%;
+        padding: 10px;
+      }
+    }
+    &.contact{
+      .contactInner{
+        .linkBtnBox{
+          .emailBtn, .emailCopyBtn,.githubBtn,.linkedInBtn {
+            font-size: 12pt;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width : 700px) {
+  .innerContainer{
+    .mainBox .mainTitle {
+      font-size: 32pt;
+    }
+    .mainBox .wordRotateText {
+      font-size: 13pt;
+    }
+    &.project{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
       flex-wrap: wrap;
       justify-content: space-between;
       row-gap: 30px;
       .projectLinkBox{
-        width: 48%;
+        width: 80%;
+        margin: auto;
         align-items: stretch;
       }
-      .projectbox{
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        padding: 30px 20px;
-        background: #FFFFFF;
-        border-radius: 10px;
-        &:hover{
-          transition: all 0.3s ease;
-          transform: translateY(-15px);
-          box-shadow: 5px 5px 10px #D9CFC7;
-        }
-        .projectImg{
-          margin-bottom: 20px;
-          aspect-ratio: 1 / 1;
-          object-fit: contain;
-          /* background-color: #EFE9E3; */
-          border-radius: 10px;
-          /* border: 2px solid #EFE9E3; */
-        }
-        .projectNm{
-          margin-bottom: 20px;
-          font-weight: 500;
-          font-size: 16.5pt;
-          text-align: center;
-        }
-        .projectInfo{
-          margin-bottom: 20px;
-          text-align: center;
-        }
-        .projectSkill{
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 10px;
-          >span{
-            padding: 5px;
-            border-radius: 10px;
-            background-color: #EFE9E3;
-          }
-        }
-      }
-    }
-    &.resume{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-      .resumeBox{
-        flex: 1;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &.resumeLeft{
-          width: 100%;
-          .react-pdf__Page__canvas {
-            max-width: 100%;
-            height: auto !important;
-            display: block;
-          }
-        }
-        &.resumeRight{
-          flex-direction: column;
-          /* align-items: baseline; */
-          .summaryTitle{
-            font-size: 17pt;
-            font-weight: 500;
-            margin-bottom: 20px;
-          }
-          .summaryBox{
-            margin-bottom: 20px;
-            width: 80%;
-            >*{
-              margin-bottom: 15px;
-            }
-            .summaryBold{
-              font-weight: 500;
-            }
-          }
-          .resumeDownBtn{
-            padding: 10px 20px;
-            border-radius: 30px;
-            background-color: #EFE9E3;
-            transition: all 0.3s ease-in-out;
-            &:hover{
-              background-color: #D9CFC7;
-            }
-          }
-        }
-      }
-      
     }
     &.contact{
       .contactInner{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .contactText{
-          font-size: 17pt;
-          margin-bottom: 20px;
-        }
-        .emailTxt{
-          margin-bottom: 40px;
-        }
         .linkBtnBox{
-          display: flex;
-          flex-direction: row;
+          flex-direction: column;
           .emailBtn, .emailCopyBtn,.githubBtn,.linkedInBtn {
-            cursor: pointer;
+            margin-right: 0;
+            margin-bottom: 20px;
             font-size: 15pt;
-            padding: 10px 20px;
-            border-radius: 30px;
-            background-color: #EFE9E3;
-            transition: all 0.3s ease-in-out;
-            margin-right: 20px;
-            &:hover{
-              background-color: #D9CFC7;
-            }
+            text-align: center;
           }
         }
-      }
-    }
-  }
-  @media (max-width : 1000px) {
-    .innerContainer{
-      &.aboutMe{  
-        flex-direction: column;
-        .aboutConLeft{
+        .linkBtnBox {
+          flex-direction: column;
           width: 100%;
+          .btnPrimary, .btnSecondary {
+            text-align: center;
+          }
         }
-        .aboutConRight{
+        .socialBtnBox {
           width: 100%;
-        }
-      }
-      &.resume{
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        .resumeBox{
-          flex: 1;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 10px;
-        }
-      }
-      &.contact{
-        .contactInner{
-          .linkBtnBox{
-            .emailBtn, .emailCopyBtn,.githubBtn,.linkedInBtn {
-              font-size: 12pt;
-            }
+          flex-direction: column;
+          .socialBtn {
+            text-align: center;
           }
         }
       }
     }
   }
-  @media (max-width : 700px) {
-    .innerContainer{
-      &.project{
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        row-gap: 30px;
-        .projectLinkBox{
-          width: 80%;
-          margin: auto;
-          align-items: stretch;
-        }
-      }
-      &.contact{
-        .contactInner{
-          .linkBtnBox{
-            flex-direction: column;
-            .emailBtn, .emailCopyBtn,.githubBtn,.linkedInBtn {
-              margin-right: 0;
-              margin-bottom: 20px;
-              font-size: 15pt;
-              text-align: center;
-            }
-          }
-        }
-      }
-    }
-  
-  }
+}

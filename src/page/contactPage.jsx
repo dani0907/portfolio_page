@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
+
 function ContactPage(){
   const email = "danileesep7@gmail.com";
-  // Gmail link
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
 
   const copyToClipboard = () => {
@@ -14,21 +14,37 @@ function ContactPage(){
       <h1 className='innerTitle'>Contact</h1>
       <div className="innerContainer contact">
         <div className="contactInner">
-          <p className="contactText">Feel free to reach out via Gmail!</p>
-          <p className="emailTxt">danileesep7@gmail.com</p>
+
+          <p className="contactText">Let's work together 🤝</p>
+          <p className="contactSubText">
+            I'm currently open to new opportunities. Feel free to reach out!
+          </p>
+          <p className="emailTxt">{email}</p>
+
           <div className="linkBtnBox">
-            <a className="emailBtn" href={gmailUrl} target="_blank" rel="noreferrer">
-              <i class="bi bi-envelope-fill"></i> Open Gmail
+            {/* Primary CTA */}
+            <a className="emailBtn btnPrimary" href={gmailUrl} target="_blank" rel="noreferrer">
+              <i className="bi bi-envelope-fill"></i> Send Email
             </a>
-            <button className="emailCopyBtn" href="" onClick={copyToClipboard}>
-              <i class="bi bi-clipboard-check"></i> Copy Email Address
+            <button className="emailCopyBtn btnSecondary" onClick={copyToClipboard}>
+              <i className="bi bi-clipboard-check"></i> Copy Address
             </button>
-            <a className="githubBtn" href="https://github.com/dani0907" target="_blank"><i class="bi bi-github"></i> Github</a>
-            <a className="linkedInBtn" href="https://linkedin.com/in/dayeonleedev" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
           </div>
+
+          <div className="socialBtnBox">
+            <a className="githubBtn socialBtn" href="https://github.com/dani0907" target="_blank" rel="noreferrer">
+              <i className="bi bi-github"></i> GitHub
+            </a>
+            <a className="linkedInBtn socialBtn" href="https://linkedin.com/in/dayeonleedev" target="_blank" rel="noreferrer">
+              <i className="bi bi-linkedin"></i> LinkedIn
+            </a>
+          </div>
+
         </div>
       </div>
-      <Link to="/" className='nextPageBtn'>Go back to the Main <i className="bi bi-chevron-right nextBtnIcon"></i></Link>
+      <Link to="/" className='nextPageBtn'>
+        Go back to Main <i className="bi bi-chevron-right nextBtnIcon"></i>
+      </Link>
     </div>
   )
 }
