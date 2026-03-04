@@ -16,12 +16,27 @@ function ResumePage(){
         <div className="resumeBox resumeRight">
           <h4 className="summaryTitle">Summary</h4>
           <div className="summaryBox">
-            <p>Full-Stack Developer with 3+ years of experience in the insurance sector, specializing in large-scale data processing and scalable web applications.</p>
-            <p><span className="summaryBold">Large-Scale Data Management</span> : Managed batch processing for 150,000+ insurance agent records, ensuring zero data loss and high performance.</p>
-            <p><span className="summaryBold">Strategic Development & Enhancement</span> : Developed new software modules and delivered tailored enhancements by collaborating directly with business stakeholders to meet evolving requirements.</p>
-            <p><span className="summaryBold">Expert Troubleshooting & Support</span> : Effectively addressed technical inquiries from business stakeholders by conducting thorough source code and log analysis, providing rapid fixes to maintain high operational efficiency.</p>
-            <p><span className="summaryBold">Tech Stack</span> : Java, Spring, SQL (Oracle/Tibero/PostgreSQL), HTML5, CSS3/SCSS, JavaScript, jQuery, TypeScript, React, Angular.</p>
-            <p><span className="summaryBold">Location</span> : Vancouver, BC (Open to In-person/Hybrid)</p>
+            <p>
+              Java-focused <span className="summaryBold">Full-stack Developer</span> with 3 years of experience specializing in enterprise-level systems within the insurance industry. 
+              Proven track record of delivering high-availability solutions through rigorous root cause analysis and performance tuning.
+            </p>
+            <p>
+              <span className="summaryBold">Enterprise System Management</span>: Managed and optimized financial systems handling 1.2M+ customer records, ensuring seamless data processing for major institutions.
+            </p>
+            <p>
+              <span className="summaryBold">High-Integrity Data Processing</span>: Independently designed and implemented batch processing for 150,000+ records, achieving 99.9% data integrity.
+            </p>
+            <p>
+              <span className="summaryBold">Expert Troubleshooting</span>: Resolved 100+ production tickets annually by conducting deep-dive analysis of Java source code and distributed logs, significantly reducing system downtime.
+            </p>
+            <p>
+              <span className="summaryBold">Tech Stack</span><br/>
+              <span className="summaryBold">Back-end:</span> Java, Spring Boot, SQL (Oracle, Tibero, PostgreSQL)<br/>
+              <span className="summaryBold">Front-end:</span> React, Angular, TypeScript, JavaScript (ES6+), HTML5, CSS3/SCSS 
+            </p>
+            <p>
+              <span className="summaryBold">Location</span>: Vancouver, BC (Available for In-person/Hybrid/remote roles)
+            </p>
           </div>
           <a className="resumeDownBtn" href="/Dayeon_Resume.pdf" download="Dayeon_Lee_Resume_Fullstack_Software_Engineer.pdf"><i className="bi bi-download"></i> Download Resume</a>
         </div>
