@@ -15,20 +15,20 @@ function AboutPage(){
 
         <div className="aboutConLeft">
           <p className="aboutHighlight">
-            Full-Stack Developer with <span className="pointColor">3 years</span> of enterprise experience.
+            Full-Stack Developer with <span className="pointColor">3+ years</span> of enterprise experience.
           </p>
           <p>
-            Specialized in robust enterprise solutions — I have a proven track record of managing
-            large-scale data systems, including batch processing for over{" "}
-            <span className="pointColor">150,000+ insurance agent records</span>.
+            enterprise-level systems within the insurance and finance sectors. 
+            I have a proven track record of managing and optimizing high-availability 
+            systems handling <span className="pointColor">1.2M+ customer records</span> for major institutions.
           </p>
           <p>
-            I excel at translating complex client requirements into both brand-new software modules
-            and optimized system enhancements, ensuring they align perfectly with business goals.
+            Took ownership of designing and implementing batch processing systems for <span className="pointColor">150,000+ records</span>, 
+            ensuring high data integrity and reliable delivery.
           </p>
           <p>
-            I take pride in my proactive approach to troubleshooting — performing deep-dive analyses
-            of code and logs to deliver rapid, effective solutions for business stakeholders.
+            Beyond development, I am a dedicated problem-solver. I have resolved <span className="pointColor">100+ production tickets annually</span> through deep-dive root cause analysis of Java source code and distributed logs, 
+            significantly reducing system downtime and ensuring operational excellence for premier clients.
           </p>
         </div>
 

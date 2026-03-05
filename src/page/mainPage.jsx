@@ -24,7 +24,7 @@ function MainPage(){
             ]}
           />
           <p className="mainSubDesc">
-            3 years of enterprise experience · Java · React · Spring Boot
+            3+ years of enterprise experience · Java · React · Spring Boot
           </p>
 
         </div>

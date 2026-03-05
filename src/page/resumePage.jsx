@@ -10,8 +10,8 @@ const summaryItems = [
   },
   {
     icon: "bi-database-check",
-    title: "High-Integrity Data Processing",
-    desc: "Independently designed and implemented batch processing for 150,000+ records, achieving 99.9% data integrity."
+    title: "Large-Scale Data Processing",
+    desc: "Took ownership of designing and implementing batch processing systems for 150,000+ records, ensuring high data integrity and reliable delivery."
   },
   {
     icon: "bi-bug",
@@ -38,7 +38,7 @@ function ResumePage(){
 
           <div className="resumeIntro">
             <p className="resumeIntroText">
-              <span className="pointColor">Java-focused Full-Stack Developer</span> with 3 years of
+              <span className="pointColor">Java-focused Full-Stack Developer</span> with 3+ years of
               enterprise experience in the insurance industry. Proven track record in high-availability
               systems and performance tuning.
             </p>
