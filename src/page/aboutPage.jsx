@@ -4,7 +4,7 @@ function AboutPage(){
   const skills = {
     "Back-end": ["Java", "Spring Boot", "SQL (Oracle, Tibero, PostgreSQL)"],
     "Front-end": ["HTML5", "CSS3/SCSS", "JavaScript", "TypeScript", "jQuery", "React", "Angular"],
-    "Tools & Infra": ["Git", "GitHub", "SVN"],
+    "Tools & Infra": ["Git", "GitHub", "SVN", "Jenkins"],
     "Enterprise": ["BXM", "ProObject", "eXBuilder6", "NCRM"],
   };
 
