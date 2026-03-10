@@ -67,17 +67,18 @@ function ProjectPage() {
       projectSkills: ['React', 'JavaScript', 'HTML', 'CSS', 'Supabase (BaaS)', 'Recharts'],
     },
     {
-      projectNm: 'Daily Diary [In Progress]',
-      projectInfo: 'A cozy personal diary web app to capture and save daily memories. Built with Angular and Spring Boot.',
+      projectNm: 'Daily Diary',
+      projectInfo: 'A cozy personal diary web app to capture and save daily memories. Built with Angular, Node.js, and MongoDB.',
       projectImg: '/image/dailydiary.png',
       projectRole: 'Solo Developer (Full-Stack)',
       projectFeature: [
-        { name: 'Real-time Collaboration', data: 'Utilizing WebSockets for instant task synchronization.' },
-        { name: 'Mobile Optimization', data: 'Responsive UI for a native-app-like mobile experience.' },
+        { name: 'Monthly Calendar & Diary Editor', data: 'Browse entries on an interactive calendar and write or edit diary entries by selecting a date.' },
+        { name: 'Full-Stack CRUD', data: 'Diary data stored and retrieved from MongoDB via a Node.js + Express REST API.' },
+        { name: 'Theme Switcher', data:'5 pastel color themes applied globally via CSS variables.'}
       ],
       projectLink: '',
       projectGithub: 'https://github.com/dani0907/monthlyDiary',
-      projectSkills: ['Angular', 'Spring Boot', 'Java', 'SQL (PostgreSQL)', 'TypeScript', 'HTML', 'CSS/SCSS'],
+      projectSkills: ['Angular', 'Node.js','MongoDB', 'TypeScript', 'HTML', 'CSS/SCSS'],
     },
     {
       projectNm: 'Kanban Board [In Progress]',
